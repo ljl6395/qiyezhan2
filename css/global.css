@@ -37,8 +37,10 @@ header a {
   border-radius: 5px;
 }
 #nav2 {
-  margin-top: 15px;
-  display: none;
+  /* margin-top: 15px;
+  display: none; */
+  height: 0;
+  overflow: hidden;
 }
 #nav2.active {
   display: block;

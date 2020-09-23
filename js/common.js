@@ -20,6 +20,11 @@ $(document).ready(function() {
 
   $('#menu').on('click', function() {
     document.querySelector('#nav2').classList.toggle('active')
+    if ($('#nav2').hasClass('active')) {
+      $('#nav2').animate({ marginTop: '15px', height: '70px' }, 200)
+    } else {
+      $('#nav2').animate({ height: '0px', marginTop: '0px' }, 200)
+    }
   })
 
   $(window).resize(function() {
