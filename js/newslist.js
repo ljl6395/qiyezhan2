@@ -1,6 +1,7 @@
-axios.get(`./router/newsinfo-page=1.json`)
+const id = window.location.search.split('id=')[1]
+axios.get(`https://www.fastmock.site/mock/58474f0cb5a0cdb0857fcb5441102cb4/test/news-list?id=${id}`)
   .then(function (res) {
-    let item = res.data.news[0]
+    let item = res.data.newslist[0]
 
     $('#titleDivAA').append(`
       <span class="red"></span><p class="newsTitle">${item.title}</p>

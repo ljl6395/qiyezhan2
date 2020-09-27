@@ -134,7 +134,7 @@
     display: flex;
   }
   #newsInfo > ul > li img {
-    width: 100%;
+    width: 150px;
     height: auto;
     float: left;
   }

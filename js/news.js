@@ -1,12 +1,13 @@
 $(document).ready(function() {
   var total = 0
   function fetch(num, refetch) {
-    axios.get(`https://mock-api.com/mgvrkAgQ.mock/newsinfo?page=${num}`)
+    // axios.get(`https://mock-api.com/mgvrkAgQ.mock/newsinfo?page=${num}`)
+    axios.get(`https://www.fastmock.site/mock/58474f0cb5a0cdb0857fcb5441102cb4/test/news-list?page=${num}`)
       .then(function (res) {
-        res.data.news.forEach(function (item, key) {
+        res.data.newslist.forEach(function (item, key) {
           $('#newsInfo > ul').append(`
             <li>
-                <a href="./newslist.html?id=${key}" name="${item}"><img src="${item.img}" alt=""></a>
+                <a href="./newslist.html?id=${item.id}" name="${item}"><img src="${item.img}" alt=""></a>
                 <div class="msg">
                   <p class="title">${item.title}</p>
                   <p class="date">${item.date}</p>
